@@ -30,30 +30,13 @@ console.log(isCharacterAVowel('o'))
 // ? reverseString("jag testar") should return the string "ratset gaj".
 
 
-// function isCharacterAVowel(char)
-// {
-//   if ('aeiou'.includes(char)) 
-//   {
-//   console.log( true )
-// }
-//   else 
-//   {
-//   console.log(false) 
-// }
-// }
+function reverseString(string){
+  let reversedString = ''
+  for (let i = 0; i < string.length; i++) {
+    console.log( i , string[i])
+    reversedString = string[i] + reversedString
+  }
+  return reversedString
+}
 
-
-// console.log(isCharacterAVowel('a')
-
-// function reverseString(str) 
-// {
-// word = 'internet'
-
-// for (i = 0; i < word.length - 1; i --) {
-//   console.log(word[i])
-
-
-
-// }
-
-// console.log(reverseString('web'))
+console.log(reverseString('Hello world'))
