@@ -11,8 +11,13 @@ function demo(array) {
 // ? using `map` write a function that returns the total number of characters of each character in an array of words
 // ? eg: characterCount(['Stay', 'hungry', 'stay', 'foolish']) => [4, 5, 4, 7]
 function characterCount(array) {
-  
+  const mappedArray = array.map(item=> {
+    return item.length
+    
+  })
+  return mappedArray
 }
+
 
 // ? using `map` write a function that converts an array of farenheit values to celcius
 // ? eg: convertTemps([23, 140, 212, 41]) => [-5, 60, 100, 5]
