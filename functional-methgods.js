@@ -14,7 +14,7 @@ const mappedCapitals = capitals.map((capital)=> {
 
   return capital.toUpperCase()
 
-})
+}) 
 
 console.log(mappedCapitals)
 
@@ -34,3 +34,14 @@ const sum = numbers.reduce((acc, number) => {
   return acc + number
 
 },0)
+
+const allCitiesAreBig = capitals.every(capital =>{
+  return capital.length > 4
+})
+console.log(allCitiesAreBig)
+
+const someCapitals = capitals.some(capital =>{
+  return capital.length > 3
+})
+
+console.log(someCapitals)
