@@ -83,3 +83,13 @@ console.log(indexOfItem)
 const doesBelinExist = capitals.includes('Berlin')
 
 console.log(doesBelinExist)
+
+function isHereBeACapital(array){
+  const hasCapital = array.some((capital)=>{
+    return capital === 'London'
+  })
+  return hasCapital
+}
+
+const answer = isHereBeACapital(['London','Barcelona','Valetta'])
+console.log(answer)
