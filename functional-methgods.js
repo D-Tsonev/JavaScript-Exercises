@@ -30,10 +30,29 @@ const numbers = [1,2,3,4,5,6]
 
 
 const sum = numbers.reduce((acc, number) => {
-
+  console.log('Acc', acc)
+  console.log('NUMBER',number )
   return acc + number
 
 },0)
+console.log(sum)
+
+const food = ['banana','pineapple','orange']
+
+const firstLetter = food.reduce((acc,food)=>{
+  return acc + food[0]
+},'')
+
+console.log(firstLetter)
+
+
+const mapWithReduce = food.reduce((acc,food)=>{
+  acc.push(food.toUpperCase())
+  return acc
+
+},[])
+
+console.log(mapWithReduce)
 
 const allCitiesAreBig = capitals.every(capital =>{
   return capital.length > 4
@@ -47,6 +66,20 @@ const someCapitals = capitals.some(capital =>{
 console.log(someCapitals)
 
 const findCapital = capitals.find(capital =>{
-  return capital === 'London'
+  return capital.startsWith('B')
 })
 console.log(findCapital)
+
+const findIndex = capitals.findIndex(capital=>{
+  return capital.length > 3
+})
+
+console.log(findIndex)
+
+const indexOfItem = capitals.indexOf('Rome')
+
+console.log(indexOfItem)
+
+const doesBelinExist = capitals.includes('Berlin')
+
+console.log(doesBelinExist)
