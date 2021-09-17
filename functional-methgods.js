@@ -45,3 +45,8 @@ const someCapitals = capitals.some(capital =>{
 })
 
 console.log(someCapitals)
+
+const findCapital = capitals.find(capital =>{
+  return capital === 'London'
+})
+console.log(findCapital)
