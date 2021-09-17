@@ -92,4 +92,5 @@ function isHereBeACapital(array){
 }
 
 const answer = isHereBeACapital(['London','Barcelona','Valetta'])
-console.log(answer)
+const anotherAnswer = isHereBeACapital(['Paris', 'Zagreb','Helsinki'])
+console.log(answer,anotherAnswer)
