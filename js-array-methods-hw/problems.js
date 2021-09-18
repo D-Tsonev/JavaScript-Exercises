@@ -45,8 +45,8 @@ function stringsOnly(array) {
 // ? eg: containsFalsey([100, {}, [], 'Mike']) => false, containsFalsey([100, {}, NaN, 'Mike', '', null]) => [NaN, '', null]
 function containsFalsey(array) {
   const filterred = array.filter(item=>{
-    if (!item )
-      return item
+    
+    return Boolean(!item)
   })
   return filterred
 }
