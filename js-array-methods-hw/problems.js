@@ -22,21 +22,33 @@ function characterCount(array) {
 // ? using `map` write a function that converts an array of farenheit values to celcius
 // ? eg: convertTemps([23, 140, 212, 41]) => [-5, 60, 100, 5]
 function convertTemps(array) {
-
+  const mappedArray = array.map(item=>{
+    const celcius = (item - 32) * 5 / 9
+    return celcius 
+  })
+  return mappedArray
 }
 
 // ? using `filter` write a function which returns all the string elements in an array
 // ? eg: stringsOnly([10, 'Mike', '23', NaN, 'elephant']) => ['Mike', '23', 'elephant']
 
 function stringsOnly(array) {
-
+  const filterred = array.filter(item=>{
+    if (typeof item === 'string')
+      return item 
+  })
+  return filterred
 }
 
 
 // ? using `filter` write a function that returns an array only containing falsey value
 // ? eg: containsFalsey([100, {}, [], 'Mike']) => false, containsFalsey([100, {}, NaN, 'Mike', '', null]) => [NaN, '', null]
 function containsFalsey(array) {
-
+  const filterred = array.filter(item=>{
+    if (!item )
+      return item
+  })
+  return filterred
 }
 
 // ? write a function that checks whether ANY of the numbers in the array are can be divided by 5. It should return true or false.
