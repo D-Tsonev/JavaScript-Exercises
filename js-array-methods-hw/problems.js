@@ -63,8 +63,12 @@ function divisibleBy5(array) {
 // ? write a function that checks whether ALL of the numbers in the array are can be divided by 5. It should return true or false.
 // ? eg: divisibleBy10([10, 20, 30]) => true; divisibleBy10([10, 20, 99]) => false
 function divisibleBy10(array) {
-
+  const check = array.every(item=>{
+    return item % 5 === 0 
+  } )
+  return check
 }
+
 
 // ? write a function that returns the sum of all numerical values in an array. It should be able to handle number and string datatypes.
 // ? eg: sumOfArray([1, 2, 3]) => 6; sumOfArray([1, '2', '3']) => 6;
