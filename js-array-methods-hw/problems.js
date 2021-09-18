@@ -54,7 +54,10 @@ function containsFalsey(array) {
 // ? write a function that checks whether ANY of the numbers in the array are can be divided by 5. It should return true or false.
 // ? eg: divisibleBy5([8, 12, 15]) => true; divisibleBy5([11, 9, 34]) => false
 function divisibleBy5(array) {
-
+  const check = array.some(item=>{
+    return item % 5 === 0 
+  } )
+  return check
 }
 
 // ? write a function that checks whether ALL of the numbers in the array are can be divided by 5. It should return true or false.
