@@ -73,7 +73,10 @@ function divisibleBy10(array) {
 // ? write a function that returns the sum of all numerical values in an array. It should be able to handle number and string datatypes.
 // ? eg: sumOfArray([1, 2, 3]) => 6; sumOfArray([1, '2', '3']) => 6;
 function sumOfArray(array) {
-
+  const total = array.reduce((acc,item)=> {
+    return acc + Number(item)
+  }, 0)
+  return total
 }
 
 // ? using `split` and `filter` write a function that counts the number of vowels in a sentence
