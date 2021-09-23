@@ -81,17 +81,21 @@ function sumOfArray(array) {
 
 // ? using `split` and `filter` write a function that counts the number of vowels in a sentence
 // ? eg: numberOfVowels('Stay classy San Diego') => 6
-// function numberOfVowels(string) {
-// const vowels="AEIOUaeio"
-// const vowelsSums=string.filter((words)=>{
-//   return vowels.includes(words).length
-// })
-// return vowels
-// }
+function numberOfVowels(string) {
+const vowels="AEIOUaeio"
+if (vowels.includes(string))
+{
+  vowels.split()
+const vowelsSums=string.filter((vowel)=>{
+  sumOfLenght= vowel.length
+  return vowelsSums
+} 
+
+
 
 // ? using, `split`, `map` and `join`, write a function that capitalises the first letter of each word in a sentance
 // ? eg: titleCase('The lord of the rings') => 'The Lord Of The Rings'
-// function titleCase(string) {
+ function titleCase(string) {
 
 
 // }
@@ -108,6 +112,6 @@ module.exports = {
   divisibleBy5,
   divisibleBy10,
   sumOfArray,
-  // numberOfVowels,
-  // titleCase
+  numberOfVowels,
+  titleCase
 }
