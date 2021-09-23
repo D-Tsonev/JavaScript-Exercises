@@ -95,7 +95,7 @@ const vowelsSums=string.filter((vowel)=>{
 
 // ? using, `split`, `map` and `join`, write a function that capitalises the first letter of each word in a sentance
 // ? eg: titleCase('The lord of the rings') => 'The Lord Of The Rings'
- function titleCase(string) {
+function titleCase(string) {
 
 
 // }

@@ -8,7 +8,7 @@ const filteredCapitals = capitals.filter((capital)=>{
   return capital.length > 5
 })
 
-console.log(filteredCapitals)
+console.log('filter ->',filteredCapitals)
 
 const mappedCapitals = capitals.map((capital)=> {
 
@@ -16,7 +16,7 @@ const mappedCapitals = capitals.map((capital)=> {
 
 }) 
 
-console.log(mappedCapitals)
+console.log('map->',mappedCapitals)
 
 const numbers = [1,2,3,4,5,6]
 
@@ -68,7 +68,7 @@ console.log(someCapitals)
 const findCapital = capitals.find(capital =>{
   return capital.startsWith('B')
 })
-console.log(findCapital)
+console.log('find->',findCapital)
 
 const findIndex = capitals.findIndex(capital=>{
   return capital.length > 3
@@ -78,7 +78,7 @@ console.log(findIndex)
 
 const indexOfItem = capitals.indexOf('Rome')
 
-console.log(indexOfItem)
+console.log('indexof->',indexOfItem)
 
 const doesBelinExist = capitals.includes('Berlin')
 
@@ -93,4 +93,4 @@ function isHereBeACapital(array){
 
 const answer = isHereBeACapital(['London','Barcelona','Valetta'])
 const anotherAnswer = isHereBeACapital(['Paris', 'Zagreb','Helsinki'])
-console.log(answer,anotherAnswer)
+console.log('some->',answer,anotherAnswer)
