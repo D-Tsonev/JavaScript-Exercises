@@ -76,7 +76,7 @@ describe('numberOfVowels', () => {
   })
 })
 
-xdescribe('titleCase', () => {
+describe('titleCase', () => {
   test('should capitalise the first letter of each word', () => {
     expect(fns.titleCase('The lord of the rings')).toEqual('The Lord Of The Rings')
     expect(fns.titleCase('The red hot chili peppers')).toEqual('The Red Hot Chili Peppers')
