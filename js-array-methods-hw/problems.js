@@ -55,19 +55,37 @@ function divisibleBy5(array) {
 
 // ? write a function that checks whether ALL of the numbers in the array are can be divided by 5. It should return true or false.
 // ? eg: divisibleBy10([10, 20, 30]) => true; divisibleBy10([10, 20, 99]) => false
-function divisibleBy10(array) {}
+  function divisibleBy10(array) {
+    const check = array.every(item=>{
+      return item % 10 === 0 
+    } )
+    return check
+  }
 
 // ? write a function that returns the sum of all numerical values in an array. It should be able to handle number and string datatypes.
 // ? eg: sumOfArray([1, 2, 3]) => 6; sumOfArray([1, '2', '3']) => 6;
-function sumOfArray(array) {}
+function sumOfArray(array) {
+  const sum=array.reduce((acc,item)=>{
+    return acc + Number(item)
+  }, 0)
+  return sum 
+}
 
 // ? using `split` and `filter` write a function that counts the number of vowels in a sentence
 // ? eg: numberOfVowels('Stay classy San Diego') => 6
-function numberOfVowels(string) {}
+function numberOfVowels(string) {
+  const array=string.split('')
+  const filterred=array.filter(letter=> 'AEIOUaeio'.includes(letter))
+  return filterred.length
+}
 
 // ? using, `split`, `map` and `join`, write a function that capitalises the first letter of each word in a sentance
 // ? eg: titleCase('The lord of the rings') => 'The Lord Of The Rings'
-function titleCase(string) {}
+function titleCase(string) {const splitStr = string.split(' ');  
+const newSTR = splitStr.map(word => word.charAt(0).toUpperCase() + word.substr(1).toLowerCase());
+return newSTR.join(" ")
+}
+
 
 // ! please do not alter below ✋
 
