@@ -1,24 +1,22 @@
-const capitals   = ['London','Berlin','Rome']
+const capitals = ["London", "Berlin", "Rome"]
 
-capitals.forEach((capital, i)=> {
+capitals.forEach((capital, i) => {
   console.log(capital, i)
 })
 
-const filteredCapitals = capitals.filter((capital)=>{
+const filteredCapitals = capitals.filter((capital) => {
   return capital.length > 5
 })
 
-console.log('filter ->',filteredCapitals)
+console.log("filter ->", filteredCapitals)
 
-const mappedCapitals = capitals.map((capital)=> {
-
+const mappedCapitals = capitals.map((capital) => {
   return capital.toUpperCase()
+})
 
-}) 
+console.log("map->", mappedCapitals)
 
-console.log('map->',mappedCapitals)
-
-const numbers = [1,2,3,4,5,6]
+const numbers = [1, 2, 3, 4, 5, 6]
 
 // const mappedNumberes = numbers.map((number)=> {
 
@@ -28,69 +26,65 @@ const numbers = [1,2,3,4,5,6]
 
 // console.log(mappedNumberes)
 
-
 const sum = numbers.reduce((acc, number) => {
-  console.log('Acc', acc)
-  console.log('NUMBER',number )
+  console.log("Acc", acc)
+  console.log("NUMBER", number)
   return acc + number
-
-},0)
+}, 0)
 console.log(sum)
 
-const food = ['banana','pineapple','orange']
+const food = ["banana", "pineapple", "orange"]
 
-const firstLetter = food.reduce((acc,food)=>{
+const firstLetter = food.reduce((acc, food) => {
   return acc + food[0]
-},'')
+}, "")
 
 console.log(firstLetter)
 
-
-const mapWithReduce = food.reduce((acc,food)=>{
+const mapWithReduce = food.reduce((acc, food) => {
   acc.push(food.toUpperCase())
   return acc
-
-},[])
+}, [])
 
 console.log(mapWithReduce)
 
-const allCitiesAreBig = capitals.every(capital =>{
+const allCitiesAreBig = capitals.every((capital) => {
   return capital.length > 4
 })
 console.log(allCitiesAreBig)
 
-const someCapitals = capitals.some(capital =>{
+const someCapitals = capitals.some((capital) => {
   return capital.length > 3
 })
 
 console.log(someCapitals)
 
-const findCapital = capitals.find(capital =>{
-  return capital.startsWith('B')
+const findCapital = capitals.find((capital) => {
+  return capital.startsWith("B")
 })
-console.log('find->',findCapital)
+console.log("find->", findCapital)
 
-const findIndex = capitals.findIndex(capital=>{
+const findIndex = capitals.findIndex((capital) => {
   return capital.length > 3
 })
 
 console.log(findIndex)
 
-const indexOfItem = capitals.indexOf('Rome')
+const indexOfItem = capitals.indexOf("Rome")
 
-console.log('indexof->',indexOfItem)
+console.log("indexof->", indexOfItem)
 
-const doesBelinExist = capitals.includes('Berlin')
+const doesBelinExist = capitals.includes("Berlin")
 
 console.log(doesBelinExist)
 
-function isHereBeACapital(array){
-  const hasCapital = array.some((capital)=>{
-    return capital === 'London'
+function isHereBeACapital(array) {
+  const hasCapital = array.some((capital) => {
+    return capital === "London"
   })
   return hasCapital
 }
 
-const answer = isHereBeACapital(['London','Barcelona','Valetta'])
-const anotherAnswer = isHereBeACapital(['Paris', 'Zagreb','Helsinki'])
-console.log('some->',answer,anotherAnswer)
+const answer = isHereBeACapital(["London", "Barcelona", "Valetta"])
+const anotherAnswer = isHereBeACapital(["Paris", "Zagreb", "Helsinki"])
+console.log("some->", answer, anotherAnswer)
