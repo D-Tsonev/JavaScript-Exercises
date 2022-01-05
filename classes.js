@@ -22,9 +22,22 @@ class Animal {
     this.name = name
     this.colour = colour
   }
-  introduce(){
-    console.log(``)
+  introduce() {
+    console.log(`Hi my name is ${this.name} and I am ${this.colour}`)
   }
 }
 
-new Animal('Cobra')
+class Duck extends Animal {
+  constructor(name, colour, type) {
+    super(name, colour)
+    this.type = type
+    this.colour = 'Brown '
+  }
+  quack() {
+    console.log(`QUACK ${this.type}`)
+  }
+}
+
+const donald = new Duck('Donald', 'yellow', 'type')
+donald.introduce()
+donald.quack()
