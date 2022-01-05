@@ -86,3 +86,9 @@ const batman = {
 batman.sayHello()
 batman.getDressed('cape')
 console.log(batman.costume)
+
+const waffle = {}
+waffle.itemOne = 'Strawberries'
+waffle['moreToppings'] = ['Cream', 'Chocolate']
+
+console.log(waffle)
