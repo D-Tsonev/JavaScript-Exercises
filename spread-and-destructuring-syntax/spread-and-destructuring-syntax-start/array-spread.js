@@ -14,7 +14,7 @@ const dogs = ['labrador', 'beagle', 'shitzu', 'dalmation']
 // ? Using the spread syntax, define a const "newDogs" and assign it value of an array, with the contents of the dogs array spread inside and a new dog breed added to the end of the array.
 // ? eg => ['labrador', 'beagle', 'shitzu', 'dalmation', 'bulldog']
 
-const newDogs = [...dogs,'bulldog']
+const newDogs = [...dogs, 'bulldog']
 
 console.log(newDogs)
 console.log(dogs)
@@ -30,18 +30,26 @@ const fruits = ['apple', 'pear', 'bananna', 'cherry']
 // ? Using the spread syntax, create a new array as a const "newFruits", it should contain the values from the fruits array, but with a new fruit added to the beggining of the array.
 // ? eg => ['kiwi', 'apple', 'pear', 'bananna', 'cherry']
 
+const newFruits = ['kiwi', ...fruits]
+console.log(newFruits)
+console.log(fruits)
+
 // ? console log both arrays to make sure the original fruits array has not been changed
 
 // * **********************************************************************************
 
 // ? Uncomment the following array
 
-// const sports = ['football', 'tennis', 'cricket']
+const sports = ['football', 'tennis', 'cricket']
 
 // ? Using spread, make a new array "newSports", containing the values of the sports array, but with a new sport added to the beginning and end of the new array.
 // ? eg => ['basketball', 'football', 'tennis', 'cricket', 'hockey']
 
 // ? console log both arrays to make sure the original sports array has not been changed
+
+const newSport = ['basketball', ...sports, 'hockey']
+console.log(newSport)
+console.log(sports)
 
 // * **********************************************************************************
 
@@ -49,9 +57,14 @@ const fruits = ['apple', 'pear', 'bananna', 'cherry']
 
 // ? Uncomment the following array
 
-// const numbers = [ 1, 2, 3, 4, 6, 7, 8, 9]
+const numbers = [1, 2, 3, 4, 6, 7, 8, 9]
 
 // ? Create a const "fixedNumbers", using the spread syntax and slice() method, insert the number 5 at the correct index in the array to fix the sequence.
+
+const fixedNumbers = [...numbers.slice(0, 4), 5, ...numbers.slice(4)]
+
+console.log('original ', numbers)
+console.log('new', fixedNumbers)
 
 // ? console log both arrays to make sure the original number array has not been changed
 
