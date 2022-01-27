@@ -1,9 +1,9 @@
-function ListComponent() {
+function ListComponent(props) {
   const animals = ['lion', 'cheetah', 'tiger', 'panther']
-
+  console.log('Proprs->', props)
   return (
     <div>
-      {animals.map(animal => (
+      {animals.map((animal) => (
         <p key={animal}>{animal}</p>
       ))}
     </div>
