@@ -5,8 +5,7 @@ function DonorInfo({ contact }) {
     <section>
       <ul>
         <li>
-            <p >{contact.email}</p>
-          ))}
+          <p>{contact.email}</p>
         </li>
       </ul>
     </section>
