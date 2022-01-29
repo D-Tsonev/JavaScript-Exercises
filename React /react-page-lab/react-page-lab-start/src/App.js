@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from './components/Header'
 import GeneralInfo from './components/GeneralInfo'
+import DonorInfo from './components/DonorInfo'
 
 function App() {
   const headerData = {
@@ -41,7 +42,7 @@ function App() {
       <hr />
       <GeneralInfo {...infoData} />
       <hr />
-      {/* <DonorInfo {...donorData} /> */}
+      <DonorInfo {...donorData} />
     </main>
   )
 }
