@@ -1,10 +1,14 @@
 import React from 'react'
-// import image from '../assets/hero.jpg'
+import image from '../assets/hero.jpg'
 
-function Header (){
-
+function Header({ title, subtitle }) {
   return (
-    <h1>Hello </h1>
+    <section>
+      <h2>Exhibit:</h2>
+      <img src={image} alt={title} />
+      <h3>{title}</h3>
+      <h4>{subtitle}</h4>
+    </section>
   )
 }
 
