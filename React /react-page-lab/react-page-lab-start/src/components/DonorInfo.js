@@ -3,11 +3,10 @@ import React from 'react'
 function DonorInfo({ contact }) {
   return (
     <section>
-      <ul>
-        <li>
-          <p>{contact.email}</p>
-        </li>
-      </ul>
+      <h2>Donor Information</h2>
+      <h3>Contact:</h3>
+      <a href="/">{contact.email}</a>
+      <h3>Donation Amounts:</h3>
     </section>
   )
 }
