@@ -17,12 +17,12 @@ function App() {
       { day: 'Thursday', times: '10.00am - 5.30pm' },
       { day: 'Friday', times: '10.00am - 9.00pm' },
       { day: 'Saturday', times: '10.00am - 9.00pm' },
-      { day: 'Sunday', times: '10.00am - 5.30pm' },
+      { day: 'Sunday', times: '10.00am - 5.30pm' }
     ],
     admissions: [
       { type: 'Adults', amount: 25 },
       { type: 'Seniors', amount: 17 },
-      { type: 'Students', amount: 12 },
+      { type: 'Students', amount: 12 }
     ],
   }
 
