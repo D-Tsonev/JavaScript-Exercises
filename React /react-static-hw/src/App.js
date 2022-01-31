@@ -1,3 +1,4 @@
+import Gallery from './components/Gallery'
 import Hero from './components/Hero'
 import NavBar from './components/NavBar'
 
@@ -31,6 +32,7 @@ function App () {
       <h1>Coffee Assembly</h1>
       <NavBar/>
       <Hero/>
+      <Gallery/>
 
     </div>
   )
