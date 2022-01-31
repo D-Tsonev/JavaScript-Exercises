@@ -1,4 +1,5 @@
 import About from './components/About'
+import Footer from './components/Footer'
 import Gallery from './components/Gallery'
 import Hero from './components/Hero'
 import Menu from './components/Menu'
@@ -37,7 +38,7 @@ function App () {
       <Gallery/>
       <Menu {...menuData}/>
       <About text={aboutData.text}/>
-
+      <Footer text={footerData.text}/>
     </div>
   )
 }
