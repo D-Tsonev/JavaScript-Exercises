@@ -1,3 +1,4 @@
+import About from './components/About'
 import Gallery from './components/Gallery'
 import Hero from './components/Hero'
 import Menu from './components/Menu'
@@ -35,6 +36,7 @@ function App () {
       <Hero/>
       <Gallery/>
       <Menu {...menuData}/>
+      <About text={aboutData.text}/>
 
     </div>
   )
