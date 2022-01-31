@@ -1,5 +1,6 @@
 import Gallery from './components/Gallery'
 import Hero from './components/Hero'
+import Menu from './components/Menu'
 import NavBar from './components/NavBar'
 
 function App () {
@@ -33,6 +34,7 @@ function App () {
       <NavBar/>
       <Hero/>
       <Gallery/>
+      <Menu {...menuData}/>
 
     </div>
   )
