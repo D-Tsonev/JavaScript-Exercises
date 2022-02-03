@@ -10,6 +10,8 @@ function App() {
     },
   ])
 
+  const [newListItem, setNewListItem] = useState('')
+
   const handleToggle = (itemToUpdate) => {
     const updatedList = toDoList.map((item) => {
       if (item === itemToUpdate) {
@@ -18,6 +20,17 @@ function App() {
       return item
     })
     setToDoList(updatedList)
+  }
+
+  const handleChange = (e) => {
+    setNewListItem(e.target.value)
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    const newItemtoAdd = { task: newListItem, completed: false }
+    console.log('new Item to add', newItemtoAdd)
+    setToDoList([...toDoList,newItemtoAdd])
   }
 
   return (
@@ -34,11 +47,13 @@ function App() {
           </li>
         )
       })}
-      <form>
+      <form onSubmit={handleSubmit}>
         <input
-        placeholder='Add a task'
+          value={newListItem}
+          placeholder="Add a task"
+          onChange={handleChange}
         />
-        
+        <button>Add to list</button>
       </form>
     </div>
   )
