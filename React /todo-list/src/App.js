@@ -11,19 +11,17 @@ function App() {
   ])
 
   const handleToggle = (itemToUpdate) => {
-    console.log('item to update', itemToUpdate)
-
     const updatedList = toDoList.map((item) => {
-      console.log('item in map', item)
       if (item === itemToUpdate) {
-        console.log('match')
+        return { ...item, completed: !item.completed }
       }
+      return item
     })
+    setToDoList(updatedList)
   }
 
   return (
-    <>
-      <div className="container"></div>
+    <div className="container" v>
       <h1>To Do List</h1>
       {toDoList.map((item, index) => {
         return (
@@ -36,7 +34,13 @@ function App() {
           </li>
         )
       })}
-    </>
+      <form>
+        <input
+        placeholder='Add a task'
+        />
+        
+      </form>
+    </div>
   )
 }
 
