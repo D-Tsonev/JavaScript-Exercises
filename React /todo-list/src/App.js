@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './App.css'
 import Header from './components/Header'
+import TaskForm from './components/TaskForm'
 
 function App() {
   const [toDoList, setToDoList] = useState([
@@ -31,6 +32,7 @@ function App() {
     const newItemtoAdd = { task: newListItem, completed: false }
     console.log('new Item to add', newItemtoAdd)
     setToDoList([...toDoList,newItemtoAdd])
+    setNewListItem('')
   }
 
   return (
@@ -47,14 +49,11 @@ function App() {
           </li>
         )
       })}
-      <form onSubmit={handleSubmit}>
-        <input
-          value={newListItem}
-          placeholder="Add a task"
-          onChange={handleChange}
-        />
-        <button>Add to list</button>
-      </form>
+      <TaskForm 
+      newListItem={newListItem}
+      handleChange={handleChange}
+      handleSubmit={handleSubmit}
+      />
     </div>
   )
 }
