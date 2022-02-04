@@ -35,6 +35,13 @@ function App() {
     setNewListItem('')
   }
 
+  const handleFilter=() =>{
+    let filtered=toDoList.filter(task=>{
+      return !task.completed
+    })
+    setToDoList(filtered)
+  }
+
   return (
     <div className="container" v>
       <h1>To Do List</h1>
@@ -54,6 +61,7 @@ function App() {
       handleChange={handleChange}
       handleSubmit={handleSubmit}
       />
+      <button onClick={handleFilter}>Clear completed</button>
     </div>
   )
 }
