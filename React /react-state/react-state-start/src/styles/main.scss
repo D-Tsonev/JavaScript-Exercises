@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  color: hotpink;
+}
+
+main > div {
+  padding: 20px;
+  text-align: center;
+  button {
+    min-width: 80px;
+    background-color: hotpink;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+  }
+  .counter-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    h2 {
+      font-size: 50px;
+    }
+  }
+}
+.box {
+  height: 50px;
+  width: 50px;
+  margin: 20px auto;
+}
+.blue {
+  background-color: dodgerblue;
+}
+.yellow {
+  background-color: goldenrod;
+}
