@@ -7,15 +7,18 @@ import React from 'react'
 
 function Exercise() {
   const [IsSwhown, setShown] = React.useState(false)
+
   const handleToggle = () => {
     setShown(!IsSwhown)
   }
+  
   return (
     <div>
       {IsSwhown && <h2>I should be hidden to start with, but click the button should make me appear, clicking again will hide me</h2>}
       <button onClick={handleToggle}>
         Click me to hide and show the text below
       </button>
+
     </div>
   )
 }
