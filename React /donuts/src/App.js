@@ -21,13 +21,12 @@ function App() {
         {donuts.map((donut) => (
           <>
             <li key={donut.id}>{donut.title}</li>
-            <div>
-              <img
-                src={`http://localhost:3000/${donut.img}`}
-                alt={donut.imgAlt}
-              />
-              {console.log(donut.imgAlt)}
-            </div>
+            <img
+              src={`http://localhost:3000/${donut.img}`}
+              alt={donut.imgAlt}
+            />
+            {console.log(donut.imgAlt)}
+            <p>{donut.description}</p>
           </>
         ))}
       </ul>
