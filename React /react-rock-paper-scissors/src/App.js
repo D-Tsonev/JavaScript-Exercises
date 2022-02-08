@@ -1,5 +1,7 @@
 import React from 'react'
 
+const choices = ['rock', 'paper', 'scissors']
+
 function getWinner(playerChoice, computerChoice) {
   if (!playerChoice && !computerChoice) return null
 
@@ -17,36 +19,38 @@ function getWinner(playerChoice, computerChoice) {
 }
 
 function App() {
-  const choices = ['rock', 'paper', 'scissors']
+  const [playerChoise, setPlayerChoice] = React.useState(null)
+  const [computerChoice, setComputerChoice] = React.useState(null)
+  const [result, setResult] = React.useState(null)
 
-  const [compChoice, setCompChoise] = React.useState(
-    Math.ceil(Math.random() * choices.length)
-  )
-  console.log(compChoice)
-  const [playerChoise, setPlayerChoise] = React.useState(null)
-
-  const handlePlayerChoise = (e) => {
-    setPlayerChoise(e.target.value)
+  const handleChoice = (e) => {
+    const choice = e.target.value
+    const compChoice = choices[Math.floor(Math.random() * choices.length)]
+    const result = getWinner(choice, compChoice)
+    setPlayerChoice(choice)
+    setComputerChoice(compChoice)
+    setResult(result)
   }
 
   const handleReset = () => {
     setPlayerChoice(null)
     setComputerChoice(null)
+    setResult(null)
   }
 
   return (
     <div>
-      <p>Player Choice: !</p>
-      <p>Computer Choice: !</p>
-      <p>Result: !</p>
+      <p>Player Choice:{playerChoise} !</p>
+      <p>Computer Choice:{computerChoice} !</p>
+      <p>Result: {result}!</p>
       <div>
-        <button onClick={handlePlayerChoise} value="rock">
+        <button onClick={handleChoice} value="rock">
           Rock
         </button>
-        <button onClick={handlePlayerChoise} value="paper">
+        <button onClick={handleChoice} value="paper">
           Paper
         </button>
-        <button onClick={handlePlayerChoise} value="scissors">
+        <button onClick={handleChoice} value="scissors">
           Scissors
         </button>
         <button onClick={handleReset}>Reset Game</button>
