@@ -1,0 +1,48 @@
+// import Bulma styles here
+@import '~bulma/bulma.sass';
+
+$color-yellow: #ffd539;
+$color-grey: #efefef;
+
+.Hero {
+  .hero-body {
+    background-image: url('https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=753&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
+.cheeses-list {
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+  }
+  .card-header {
+    background-color: lighten(#ffd539, 10%);
+  }
+  .card-image {
+    flex: 1;
+  }
+  .image {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card-image img {
+    width: auto;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  .card-content {
+    border-top: 1px solid $color-grey;
+  }
+}
+
+.Loading {
+  padding: 100px;
+  text-align: center;
+}
