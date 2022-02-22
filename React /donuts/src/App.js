@@ -1,6 +1,9 @@
 import './App.css'
 import React from 'react'
 import axios from 'axios'
+import Home from './components/Home'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import NavBar from './components/Navbar'
 
 function App() {
   const [donuts, setDonuts] = React.useState([])
@@ -13,11 +16,12 @@ function App() {
     getData()
   }, [])
 
-  console.log(donuts[7])
-
   return (
     <div>
-      <ul>
+      <NavBar />
+      {/* <Home /> */}
+
+      {/* <ul>
         {donuts.map((donut) => (
           <>
             <li key={donut.id}>{donut.title}</li>
@@ -29,7 +33,7 @@ function App() {
             <p>{donut.description}</p>
           </>
         ))}
-      </ul>
+      </ul> */}
     </div>
   )
 }
