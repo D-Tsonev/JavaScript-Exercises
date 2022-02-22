@@ -4,7 +4,7 @@ function NavBar() {
   return (
     <nav className="nav">
       <ul>
-        <img src={logo} alt="Krispy Kreme logo " width="150" height="124" />
+        <img className='logo'src={logo} alt="Krispy Kreme logo " width="150" height="124" />
         <li>
           <a href="news.asp">News</a>
         </li>
