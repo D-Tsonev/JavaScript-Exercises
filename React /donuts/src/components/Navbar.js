@@ -5,14 +5,14 @@ function NavBar() {
     <nav className="nav">
       <ul>
         <img className='logo'src={logo} alt="Krispy Kreme logo " width="150" height="124" />
-        <li>
-          <a href="news.asp">News</a>
+        <li className='test'>
+          Menu
         </li>
         <li>
-          <a href="contact.asp">Contact</a>
+          About
         </li>
         <li>
-          <a href="about.asp">About</a>
+          Search
         </li>
       </ul>
     </nav>

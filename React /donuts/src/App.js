@@ -1,8 +1,7 @@
 
 import React from 'react'
 import axios from 'axios'
-import Home from './components/Home'
-import 'bootstrap/dist/css/bootstrap.min.css'
+// import Home from './components/Home'
 import NavBar from './components/Navbar'
 
 function App() {
