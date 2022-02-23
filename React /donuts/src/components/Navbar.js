@@ -1,19 +1,14 @@
 import logo from '../styles/logo.svg'
+import {Link} from 'react-router-dom'
 
 function NavBar() {
   return (
     <nav className="nav">
       <ul>
         <img className='logo'src={logo} alt="Krispy Kreme logo " width="150" height="124" />
-        <li className='test'>
-          Menu
-        </li>
-        <li>
-          About
-        </li>
-        <li>
-          Search
-        </li>
+        <li className='test'><Link to='/donuts'>Menu</Link></li>
+        <li> <Link> About </Link>About</li>
+        <li>Search</li>
       </ul>
     </nav>
   )

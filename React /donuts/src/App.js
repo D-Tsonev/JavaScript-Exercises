@@ -1,8 +1,10 @@
 
 import React from 'react'
 import axios from 'axios'
+import {BrowserRouter,Switch,Route} from 'react-router-dom'
 // import Home from './components/Home'
 import NavBar from './components/Navbar'
+import DonutIndex from './components/donust/DonutIndex'
 
 function App() {
   const [donuts, setDonuts] = React.useState([])
@@ -16,9 +18,20 @@ function App() {
   }, [])
 
   return (
-    <div>
+    <BrowserRouter>
       <NavBar />
-      {/* <Home /> */}
+      <Switch>
+        <Route  exact path='/'>
+          <Home/>
+        </Route>
+        <Route  exact path='/donuts'>
+          <DonutIndex/>
+        </Route>
+      </Switch>
+      </BrowserRouter>
+
+
+     {/* <Home /> */}
 
       {/* <ul>
         {donuts.map((donut) => (
@@ -33,7 +46,7 @@ function App() {
           </>
         ))}
       </ul> */}
-    </div>
+    
   )
 }
 
