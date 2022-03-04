@@ -1,10 +1,12 @@
-
 import React from 'react'
 import axios from 'axios'
-import {BrowserRouter,Switch,Route} from 'react-router-dom'
-// import Home from './components/Home'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
+import Home from './components/Home'
 import NavBar from './components/Navbar'
 import DonutIndex from './components/donust/DonutIndex'
+import Welcome from './components/AboutPage'
+import AboutPage from './components/AboutPage'
 
 function App() {
   const [donuts, setDonuts] = React.useState([])
@@ -18,22 +20,23 @@ function App() {
   }, [])
 
   return (
+  
     <BrowserRouter>
       <NavBar />
-      <Switch>
-        <Route  exact path='/'>
-          <Home/>
-        </Route>
-        <Route  exact path='/donuts'>
-          <DonutIndex/>
-        </Route>
-      </Switch>
-      </BrowserRouter>
+      <Routes>
+        <Route   exact path="/" element={<Home/>}  />
+        <Route  path="/donuts" element={<DonutIndex/>}/>
+        < Route path='about' element={<AboutPage/>}/>
+      </Routes>
+    </BrowserRouter>
+  )
+  }
+  // {
+    /* <Home /> */
+  
 
-
-     {/* <Home /> */}
-
-      {/* <ul>
+  
+    /* <ul>
         {donuts.map((donut) => (
           <>
             <li key={donut.id}>{donut.title}</li>
@@ -45,9 +48,8 @@ function App() {
             <p>{donut.description}</p>
           </>
         ))}
-      </ul> */}
-    
-  )
-}
+      </ul> */
+        
+
 
 export default App
