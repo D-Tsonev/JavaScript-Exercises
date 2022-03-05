@@ -7,6 +7,7 @@ import NavBar from './components/Navbar'
 import DonutIndex from './components/donuts/DonutIndex'
 import AboutPage from './components/AboutPage'
 import RandomDonut from './components/donuts/RadnomDonut'
+import DonutShow from './components/donuts/DonutShow'
 
 function App() {
 
@@ -14,8 +15,9 @@ function App() {
     <BrowserRouter>
       <NavBar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/menu" element={<DonutIndex />} />
+        <Route path="/" element={<Home />} /> 
+        <Route path='/donuts/:id' element={<DonutShow/>}/>
+        <Route path="/donuts" element={<DonutIndex />} />
         <Route path="about" element={<AboutPage />} />
         <Route path='randomdonut' element={<RandomDonut/>}/>
       </Routes>

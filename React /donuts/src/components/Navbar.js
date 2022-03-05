@@ -11,7 +11,7 @@ function NavBar() {
         alt="Krispy Kreme logo "
         width="150" height="124"/> 
         </Link>
-        <Link to='/menu'>Menu</Link>
+        <Link to='/donuts'>Menu</Link>
         <Link to='randomdonut'>Random Donut </Link>
         <Link to='/about'> About Us </Link>
         </li>

@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import DonutCard from './DonutCard'
 
 function DonutIndex() {
   const [donuts, setDonuts] = React.useState(null)
@@ -12,26 +13,17 @@ function DonutIndex() {
     getData()
   }, [])
 
-  console.log(donuts && donuts[0])
+  // console.log(donuts && donuts[0])
 
   return (
     <section>
       <div>
         <ul>
-        {donuts ? 
-          donuts.map(donut => (
-            <>
-              <li key={donut.id}>{donut.title}</li>
-              <img
-                src={`http://localhost:3000/${donut.img}`}
-                alt={donut.imgAlt}
-              />
-              {console.log(donut.imgAlt)}
-              <p>{donut.description}</p>
-            </>
-          )): (
-          <p>Loading ...</p>
-        )}
+          {donuts ? (
+            donuts.map((donut) => <DonutCard key={donut.id} {...donut} />)
+          ) : (
+            <p>Loading ...</p>
+          )}
         </ul>
       </div>
     </section>
