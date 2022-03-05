@@ -7,9 +7,8 @@ function DonutCard({ title, imgAlt, img, description, id }) {
         <div>{title}</div>
         <img src={`http://localhost:3000/${img}`} alt={imgAlt} />
       </Link>
-
       {/* {console.log(imgAlt)} */}
-      <div>{description}</div>
+      {/* <div>{description}</div> */}
     </div>
   )
 }

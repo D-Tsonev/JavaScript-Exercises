@@ -1,13 +1,13 @@
 import React from 'react'
-import axios from 'axios'
 import DonutCard from './DonutCard'
+import { getAllDobuts } from '../../lib/api'
 
 function DonutIndex() {
   const [donuts, setDonuts] = React.useState(null)
 
   React.useEffect(() => {
     const getData = async () => {
-      const res = await axios.get('http://localhost:3000/donuts')
+      const res = await getAllDobuts()
       setDonuts(res.data)
     }
     getData()
