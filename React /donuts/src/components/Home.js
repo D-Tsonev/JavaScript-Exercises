@@ -2,9 +2,11 @@
 
 function Home() {
   return (
-    <div className="container">
-      <p className="">🍩 Krispy Kreme</p>
-    </div>
+    <section>
+      <div className="container">
+        <p className="">🍩 Krispy Kreme</p>
+      </div>
+    </section>
   )
 }
 

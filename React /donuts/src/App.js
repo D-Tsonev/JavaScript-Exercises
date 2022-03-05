@@ -4,52 +4,28 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import Home from './components/Home'
 import NavBar from './components/Navbar'
-import DonutIndex from './components/donust/DonutIndex'
-import Welcome from './components/AboutPage'
+import DonutIndex from './components/donuts/DonutIndex'
 import AboutPage from './components/AboutPage'
+import RandomDonut from './components/donuts/RadnomDonut'
 
 function App() {
-  const [donuts, setDonuts] = React.useState([])
-
-  React.useEffect(() => {
-    const getData = async () => {
-      const { data } = await axios.get('http://localhost:3000/donuts')
-      setDonuts(data)
-    }
-    getData()
-  }, [])
 
   return (
-  
     <BrowserRouter>
       <NavBar />
       <Routes>
-        <Route   exact path="/" element={<Home/>}  />
-        <Route  path="/donuts" element={<DonutIndex/>}/>
-        < Route path='about' element={<AboutPage/>}/>
+        <Route path="/" element={<Home />} />
+        <Route path="/menu" element={<DonutIndex />} />
+        <Route path="about" element={<AboutPage />} />
+        <Route path='randomdonut' element={<RandomDonut/>}/>
       </Routes>
     </BrowserRouter>
   )
-  }
-  // {
-    /* <Home /> */
-  
+}
 
-  
-    /* <ul>
-        {donuts.map((donut) => (
-          <>
-            <li key={donut.id}>{donut.title}</li>
-            <img
-              src={`http://localhost:3000/${donut.img}`}
-              alt={donut.imgAlt}
-            />
-            {console.log(donut.imgAlt)}
-            <p>{donut.description}</p>
-          </>
-        ))}
-      </ul> */
+
+/* <ul>
         
-
+      </ul> */
 
 export default App

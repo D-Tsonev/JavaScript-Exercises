@@ -7,7 +7,9 @@ function NavBar() {
       <ul>
         <li className='NavBar'>
         <Link to='/'>
-        <img className='logo'src={logo} alt="Krispy Kreme logo " width="150" height="124" /> 
+        <img className='logo'src={logo} 
+        alt="Krispy Kreme logo "
+        width="150" height="124"/> 
         </Link>
         <Link to='/menu'>Menu</Link>
         <Link to='randomdonut'>Random Donut </Link>
